@@ -70,7 +70,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0"
+            className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0 overflow-hidden"
           >
             {/* Hovering Images Container */}
             <div className="relative w-full h-full" style={{ perspective: '1000px' }}>
@@ -109,14 +109,18 @@ export default function About() {
                       delay: image.animationDelay + 0.8,
                     },
                   }}
+                  className={`w-32 xs:w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 ${
+                    index === 0 
+                      ? 'left-[15%] sm:left-[10%] top-[15%] sm:top-[10%]' 
+                      : index === 1 
+                      ? 'left-[50%] top-[50%] sm:top-[40%]' 
+                      : 'left-[85%] sm:left-[75%] top-[25%] sm:top-[20%]'
+                  }`}
                   style={{
                     position: 'absolute',
-                    left: index === 0 ? '10%' : index === 1 ? '50%' : '75%',
-                    top: index === 0 ? '10%' : index === 1 ? '40%' : '20%',
                     transform: `translate(-50%, -50%) rotateY(${index * 15 - 15}deg)`,
                     zIndex: images.length - index,
                   }}
-                  className="w-40 xs:w-48 sm:w-56 md:w-64 lg:w-80 xl:w-96"
                   whileHover={{
                     scale: 1.15,
                     rotateY: 0,
@@ -124,12 +128,13 @@ export default function About() {
                     transition: { duration: 0.3 },
                   }}
                 >
-                  <div className="relative w-full h-[280px] sm:h-[320px] md:h-[350px] lg:h-[400px] xl:h-[450px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-100 via-white to-peach p-2 sm:p-3 md:p-4 backdrop-blur-sm">
+                  <div className="relative w-full h-[200px] xs:h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px] xl:h-[400px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-100 via-white to-peach p-2 sm:p-3 md:p-4 backdrop-blur-sm">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       fill
                       className="object-contain drop-shadow-2xl"
+                      sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, (max-width: 1024px) 192px, 256px"
                     />
                     {/* Glow effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-peach/10 pointer-events-none" />
