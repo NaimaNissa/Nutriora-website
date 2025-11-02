@@ -27,7 +27,6 @@ export default function Logo({ className = '', showText = false, size = 'md' }: 
           className="object-contain w-full h-full relative z-10"
           style={{ 
             filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.08))',
-            imageRendering: 'high-quality',
           }}
           unoptimized
           onError={(e) => {
