@@ -34,19 +34,28 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-primary-500 transition-colors">About Us</a>
+                <a href="#about" className="text-sm sm:text-base hover:text-primary-500 transition-colors">About Us</a>
               </li>
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Features</a>
+                <a href="#features" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Features</a>
               </li>
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Pricing</a>
+                <a href="#download" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Download</a>
               </li>
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Blog</a>
+                <a href="#contact" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Legal</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="/privacy" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Privacy Policy</a>
               </li>
               <li>
-                <a href="#" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Contact</a>
+                <a href="/terms" className="text-sm sm:text-base hover:text-primary-500 transition-colors">Terms & Conditions</a>
               </li>
             </ul>
           </div>

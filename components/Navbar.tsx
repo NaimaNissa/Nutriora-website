@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center space-x-1 sm:space-x-2">
+            <a href="/" className="flex items-center space-x-1 sm:space-x-2">
               <Logo size="md" />
               <div className="text-lg sm:text-xl md:text-2xl font-bold">
                 <span className="text-black">Nutri</span>
@@ -59,6 +59,18 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
+            <a
+              href="/privacy"
+              className="text-sm xl:text-base text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium px-2"
+            >
+              Privacy
+            </a>
+            <a
+              href="/terms"
+              className="text-sm xl:text-base text-gray-700 hover:text-primary-500 transition-colors duration-200 font-medium px-2"
+            >
+              Terms
+            </a>
           </div>
 
           {/* Download App Buttons & Mobile Menu Toggle */}
@@ -179,7 +191,7 @@ export default function Navbar() {
             <div className="flex-shrink-0 p-4 sm:p-6 border-b border-gray-100 bg-white">
               <div className="flex items-center justify-between">
                 <a 
-                  href="#" 
+                  href="/" 
                   className="flex items-center space-x-2 flex-shrink-0"
                   onClick={() => setIsOpen(false)}
                 >
@@ -220,6 +232,26 @@ export default function Navbar() {
                     {item.name}
                   </a>
                 ))}
+                
+                {/* Legal Links */}
+                <div className="border-t border-gray-200 mt-4 pt-4">
+                  <a
+                    href="/privacy"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-3 text-base sm:text-lg text-gray-700 hover:bg-primary-100 hover:text-primary-500 rounded-lg transition-colors font-medium active:bg-primary-200"
+                    style={{ display: 'block', color: '#374151' }}
+                  >
+                    Privacy Policy
+                  </a>
+                  <a
+                    href="/terms"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-3 text-base sm:text-lg text-gray-700 hover:bg-primary-100 hover:text-primary-500 rounded-lg transition-colors font-medium active:bg-primary-200"
+                    style={{ display: 'block', color: '#374151' }}
+                  >
+                    Terms & Conditions
+                  </a>
+                </div>
                 
                 {/* Download App Buttons for Mobile */}
                 <div className="flex flex-col gap-3 mt-6 sm:mt-8 pb-4">
